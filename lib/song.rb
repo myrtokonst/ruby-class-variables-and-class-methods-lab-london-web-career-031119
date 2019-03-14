@@ -25,15 +25,7 @@ def self.artists
 end 
 
 def self.genre_count
-  genre_count = {}
-  @@genres.each do |genre|
-    if genre_count.include?(genre)
-    genre_count[genre] = @@genres.count(genre)
-  else genre_count[genre]=[]
-    genre_count[genre] << @@genres.count(genre)
-  end 
-  genre_count
-end 
-end 
-genre_count.uniq
+  genre_count = Hash.new(0)
+  @@genres.each { |genre| genre_count[genre] += 1}
+ genre_count
  end 
