@@ -26,8 +26,8 @@ end
 
 def self.genre_count
   genre_count = {}
-  @@genre.each do |genre|
-    genre_count[genre] = @@genre.count(genre)
+  @@genres.each do |genre|
+    genre_count[genre] = @@genres.count(genre)
   end 
 end 
 
