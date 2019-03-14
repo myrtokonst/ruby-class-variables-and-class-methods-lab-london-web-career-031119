@@ -27,8 +27,12 @@ end
 def self.genre_count
   genre_count = {}
   @@genres.each do |genre|
+    if genre_count.include?(genre)
     genre_count[genre] = @@genres.count(genre)
+  else genre_count[genre]=[]
+    genre_count[genre] << @@genres.count(genre)
   end 
+end 
 end 
 genre_count.uniq
  end 
